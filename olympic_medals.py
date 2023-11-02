@@ -7,9 +7,6 @@ from streamlit_vizzu import Config, Data, Style, VizzuChart
 
 st.set_page_config(layout="wide")
 
-st.title("I'll be around if you have questions or you can visit [ipyvizzu.com](https://ipyvizzu.com) for more info")
-st.title("Check out this app at [olympic-medals.streamlit.app](https://olympic-medals.streamlit.app)")
-
 data_frame = pd.read_csv("data/Data Olympics.csv", dtype={"game_year": str})
 data = Data()
 data.add_df(data_frame)
@@ -61,9 +58,9 @@ else:
 
 
 
-top = st.empty()
-bottom = st.empty()
-with bottom.container():
+#top = st.empty()
+#bottom = st.empty()
+#with bottom.container():
 
 	#select countries
 	top10countries = ['USA', 'Germany', 'Soviet Union', 'Great Britain', 'France', 'China', 'Italy', 'Australia', 'Hungary', 'Japan']
@@ -107,8 +104,8 @@ config = {
 }
 
 chart.animate(Data.filter(filter), Config(config), style, delay=0)
-with top.container():
-	output = chart.show()
+#with top.container():
+output = chart.show()
 
 st.write("Click on the chart to check the underlying data")
 
