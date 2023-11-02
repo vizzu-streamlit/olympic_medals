@@ -7,6 +7,9 @@ from streamlit_vizzu import Config, Data, Style, VizzuChart
 
 st.set_page_config(layout="wide")
 
+st.title("I'll be around if you have questions or you can visit [ipyvizzu.com](https://ipyvizzu.com) for more info")
+st.title("Check out this app at [olympic-medals.streamlit.app](https://olympic-medals.streamlit.app)")
+
 data_frame = pd.read_csv("data/Data Olympics.csv", dtype={"game_year": str})
 data = Data()
 data.add_df(data_frame)
@@ -22,7 +25,7 @@ style = Style(
     {
 #        'legend' : {'label' : { 'fontSize' : '1.6em'}, 'width': '12em'},
         'plot': {
-          #  'marker' :{ 'colorPalette' : '#A2A2B2'},
+            'marker' :{ 'colorPalette' : '#3364B3 #DDDB2F #CC0000 #445C97 #517DFF #FF0000 #8F8745 #D46C29 #5D8866 #D0A3A3 #A2A2B2'},
             'yAxis': {
                 'label': {
                     'fontSize': '1em',
